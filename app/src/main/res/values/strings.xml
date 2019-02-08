@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Playground</string>
+
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+
+    <string name="screen_error">Loading screen failed</string>
+    <string name="hello_home_fragment">Hello Home fragment</string>
+    <string name="hello_dashboard_fragment">Hello Dashboard fragment</string>
+    <string name="hello_notification_fragment">Hello Notification fragment</string>
+    <string name="hello_detail_fragment">Hello Detail fragment</string>
+
+
+    <string name="hello_notification_fragment_button1">Button</string>
+    <string name="hello_notification_fragment_button_settings">Settings</string>
+
+</resources>

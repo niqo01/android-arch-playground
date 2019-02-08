@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.nicolasmilliard.playground.ui.DetailFragment"
+        android:label="fragment_detail"
+        tools:layout="@layout/screen_home">
+        <argument android:name="notificationId" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.nicolasmilliard.playground.ui.HomeFragment"
+        android:label="HomeFragment" />
+    <fragment
+        android:id="@+id/dashboardFragment"
+        android:name="com.nicolasmilliard.playground.ui.DashboardFragment"
+        android:label="fragment_dashboard"
+        tools:layout="@layout/screen_dashboard" />
+    <fragment
+        android:id="@+id/notificationsFragment"
+        android:name="com.nicolasmilliard.playground.ui.NotificationsFragment"
+        android:label="fragment_notifications"
+        tools:layout="@layout/screen_notifications">
+        <action
+            android:id="@+id/action_notificationsFragment_to_detailFragment"
+            app:destination="@id/detailFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            app:popUpTo="@+id/notificationsFragment" />
+        <action
+            android:id="@+id/action_notificationsFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            app:popUpTo="@+id/notificationsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.nicolasmilliard.playground.ui.SettingsFragment"
+        android:label="fragment_settings" />
+</navigation>
