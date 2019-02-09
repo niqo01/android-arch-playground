@@ -1,14 +1,19 @@
 package com.nicolasmilliard.playground.ui
 
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
+import androidx.navigation.ui.NavigationUI.onNavDestinationSelected
+import androidx.navigation.ui.onNavDestinationSelected
 import androidx.navigation.ui.setupWithNavController
 import butterknife.BindView
 import butterknife.ButterKnife.bind
+import com.google.android.material.bottomappbar.BottomAppBar
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.nicolasmilliard.playground.R
 import dagger.Module
@@ -21,11 +26,9 @@ import javax.inject.Inject
 
 class MainActivity : AppCompatActivity(), HasSupportFragmentInjector {
 
-    @BindView(R.id.toolbar)
-    lateinit var toolbar: Toolbar
 
-    @BindView(R.id.bottom_nav)
-    lateinit var bottomNav: BottomNavigationView
+    @BindView(R.id.bottom_app_bar)
+    lateinit var bottomNav: BottomAppBar
 
     @Inject
     lateinit var dispatchingAndroidInjector: DispatchingAndroidInjector<Fragment>
@@ -38,20 +41,16 @@ class MainActivity : AppCompatActivity(), HasSupportFragmentInjector {
         bind(this)
 
         val navController = findNavController(R.id.nav_host_fragment)
-        bottomNav.setupWithNavController(navController)
-
-        val appBarConfiguration = AppBarConfiguration(navController.graph)
-        toolbar.setupWithNavController(navController, appBarConfiguration)
-
-        navController.addOnDestinationChangedListener { _, destination, _ ->
-            when (destination.id) {
-                R.id.detailFragment -> showBottomNav(false)
-                else -> showBottomNav(true)
+        bottomNav.apply {
+            setOnMenuItemClickListener {
+                it.onNavDestinationSelected(navController)
+                true
+            }
+            setNavigationOnClickListener {
+                // Support issue https://issuetracker.google.com/issues/80267254
+                NavigationBottomSheet().show(supportFragmentManager, "Dialog")
             }
         }
-    }
-
-    private fun showBottomNav(show: Boolean) {
     }
 
     override fun supportFragmentInjector(): AndroidInjector<Fragment> = dispatchingAndroidInjector
