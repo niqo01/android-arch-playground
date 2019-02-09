@@ -1,7 +1,7 @@
 package com.nicolasmilliard.playground
 
-import com.nicolasmilliard.playground.ui.HomeService
-import com.nicolasmilliard.playground.viewmodel.HomeViewModel
+import com.nicolasmilliard.playground.presenter.HomeViewModel
+import com.nicolasmilliard.playground.service.HomeService
 import dagger.Module
 import dagger.Provides
 

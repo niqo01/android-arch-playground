@@ -1,6 +1,6 @@
 package com.nicolasmilliard.playground
 
-import com.nicolasmilliard.playground.ui.HomeService
+import com.nicolasmilliard.playground.service.HomeService
 import dagger.Module
 import dagger.Provides
 import javax.inject.Singleton

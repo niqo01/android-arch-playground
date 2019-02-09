@@ -1,21 +1,15 @@
 package com.nicolasmilliard.playground.ui
 
 import android.os.Bundle
-import android.view.Menu
-import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
-import androidx.appcompat.widget.Toolbar
 import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
-import androidx.navigation.ui.AppBarConfiguration
-import androidx.navigation.ui.NavigationUI.onNavDestinationSelected
 import androidx.navigation.ui.onNavDestinationSelected
-import androidx.navigation.ui.setupWithNavController
 import butterknife.BindView
 import butterknife.ButterKnife.bind
 import com.google.android.material.bottomappbar.BottomAppBar
-import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.nicolasmilliard.playground.R
+import com.nicolasmilliard.playground.ui.home.HomeFragmentModule
 import dagger.Module
 import dagger.android.AndroidInjection
 import dagger.android.AndroidInjector

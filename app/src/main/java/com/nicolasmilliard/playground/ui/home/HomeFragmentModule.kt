@@ -1,4 +1,4 @@
-package com.nicolasmilliard.playground.ui
+package com.nicolasmilliard.playground.ui.home
 
 import dagger.Module
 import dagger.android.ContributesAndroidInjector
