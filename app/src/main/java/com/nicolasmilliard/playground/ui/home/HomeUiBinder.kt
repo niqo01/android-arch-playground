@@ -1,38 +1,36 @@
 package com.nicolasmilliard.playground.ui.home
 
 import android.view.View
-import androidx.constraintlayout.widget.ConstraintLayout
+import android.widget.ViewAnimator
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.facebook.shimmer.ShimmerFrameLayout
 import com.nicolasmilliard.playground.R
 import com.nicolasmilliard.playground.presenter.Model
 import com.nicolasmilliard.playground.service.Item
 import com.nicolasmilliard.playground.ui.UiBinder
+import com.nicolasmilliard.playground.ui.util.displayedChildId
 import com.nicolasmilliard.playground.ui.util.getDividerInsetLeftDrawable
 import com.nicolasmilliard.playground.ui.util.layoutInflater
-
 
 class HomeUiBinder(
     view: View
 ) : UiBinder<Model> {
     private val context = view.context
-    private val resources = view.resources
 
-    private val constraintLayout = view as ConstraintLayout
+    private val viewAnimator = view as ViewAnimator
     private val results: RecyclerView = view.findViewById(R.id.results)
+    private val shimmer: ShimmerFrameLayout = view.findViewById(R.id.shimmer_view_container)
 
     private val resultsAdapter = ItemResultAdapter(context.layoutInflater, object : ItemResultAdapter.Callback {
         override fun onItemClicked(item: Item) {
             TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
         }
-
     })
 
     init {
-        constraintLayout.loadLayoutDescription(R.xml.home_states)
         results.adapter = resultsAdapter
-
 
         val layoutManager = LinearLayoutManager(context)
         val dividerItemDecoration = DividerItemDecoration(context, layoutManager.orientation)
@@ -43,11 +41,12 @@ class HomeUiBinder(
     }
 
     override fun bind(model: Model, oldModel: Model?) {
-        constraintLayout.apply {
-            when {
-                model.isLoading -> setState(R.id.loading, 0, 0)
-                !model.isLoading -> setState(R.id.home, 0, 0)
-            }
+        if (model.isLoading) {
+            shimmer.startShimmer()
+            viewAnimator.displayedChildId = R.id.shimmer_view_container
+        } else {
+            viewAnimator.displayedChildId = R.id.results
+            shimmer.stopShimmer()
         }
 
         val data = model.data

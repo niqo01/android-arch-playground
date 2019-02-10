@@ -16,7 +16,7 @@ import kotlinx.coroutines.Job
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
-@ContentView(R.layout.screen_home_loading)
+@ContentView(R.layout.screen_home)
 class HomeFragment : Fragment(), Injectable {
 
     private val binderJob = Job()

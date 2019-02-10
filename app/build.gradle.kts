@@ -161,6 +161,7 @@ dependencies {
     implementation(Config.Libs.picasso)
     implementation(Config.Libs.okHttp)
     implementation(Config.Libs.okIo)
+    implementation(Config.Libs.shimmer)
 
     testImplementation(Config.Libs.Test.junit)
     testImplementation(Config.Libs.Test.truth)

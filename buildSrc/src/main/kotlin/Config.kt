@@ -133,5 +133,6 @@ object Config {
         const val picasso = "com.squareup.picasso:picasso:2.71828"
         const val okHttp = "com.squareup.okhttp3:okhttp:3.13.1"
         const val okIo = "com.squareup.okio:okio:2.2.2"
+        const val shimmer = "com.facebook.shimmer:shimmer:0.4.0"
     }
 }
