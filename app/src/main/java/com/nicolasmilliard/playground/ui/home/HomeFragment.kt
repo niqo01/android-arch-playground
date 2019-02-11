@@ -7,9 +7,11 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProviders
 import androidx.lifecycle.get
 import com.nicolasmilliard.playground.R
+import com.nicolasmilliard.playground.Screen
 import com.nicolasmilliard.playground.presenter.HomeViewModel
 import com.nicolasmilliard.playground.ui.Injectable
 import com.nicolasmilliard.playground.ui.bindTo
+import com.squareup.picasso3.Picasso
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
@@ -23,6 +25,9 @@ class HomeFragment : Fragment(), Injectable {
     private val scope = CoroutineScope(Dispatchers.Main + binderJob)
 
     @Inject
+    @field:Screen
+    lateinit var picasso: Picasso
+    @Inject
     lateinit var homeViewModelFactory: HomeViewModel.HomeViewModelFactory
     private lateinit var homeViewModel: HomeViewModel
 
@@ -30,9 +35,10 @@ class HomeFragment : Fragment(), Injectable {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         homeViewModel = ViewModelProviders.of(this, homeViewModelFactory).get()
+        lifecycle.addObserver(picasso)
 
         scope.launch(Dispatchers.Unconfined) {
-            val binder = HomeUiBinder(view)
+            val binder = HomeUiBinder(view, picasso)
             binder.bindTo(homeViewModel)
         }
     }

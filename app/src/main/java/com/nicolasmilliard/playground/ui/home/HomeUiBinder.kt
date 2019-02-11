@@ -13,9 +13,11 @@ import com.nicolasmilliard.playground.ui.UiBinder
 import com.nicolasmilliard.playground.ui.util.displayedChildId
 import com.nicolasmilliard.playground.ui.util.getDividerInsetLeftDrawable
 import com.nicolasmilliard.playground.ui.util.layoutInflater
+import com.squareup.picasso3.Picasso
 
 class HomeUiBinder(
-    view: View
+    view: View,
+    picasso: Picasso
 ) : UiBinder<Model> {
     private val context = view.context
 
@@ -23,11 +25,12 @@ class HomeUiBinder(
     private val results: RecyclerView = view.findViewById(R.id.results)
     private val shimmer: ShimmerFrameLayout = view.findViewById(R.id.shimmer_view_container)
 
-    private val resultsAdapter = ItemResultAdapter(context.layoutInflater, object : ItemResultAdapter.Callback {
-        override fun onItemClicked(item: Item) {
-            TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
-        }
-    })
+    private val resultsAdapter =
+        ItemResultAdapter(context.layoutInflater, picasso, object : ItemResultAdapter.Callback {
+            override fun onItemClicked(item: Item) {
+                TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+            }
+        })
 
     init {
         results.adapter = resultsAdapter

@@ -8,7 +8,6 @@ buildscript {
         google()
         jcenter()
         gradlePluginPortal()
-
     }
     dependencies {
         classpath(Config.Plugins.android)
@@ -26,7 +25,7 @@ allprojects {
     repositories {
         google()
         jcenter()
-
+        maven(url = "https://oss.sonatype.org/content/repositories/snapshots/")
     }
 
     tasks.withType(JavaCompile::class).all {

@@ -6,14 +6,16 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import com.nicolasmilliard.playground.R
 import com.nicolasmilliard.playground.service.Item
+import com.squareup.picasso3.Picasso
 
 internal class ItemResultAdapter(
     private val inflater: LayoutInflater,
+    private val picasso: Picasso,
     private val callback: Callback
 ) : ListAdapter<ItemResult, ItemResultViewHolder>(ItemResultItemCallback) {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ItemResultViewHolder {
         val view = inflater.inflate(R.layout.item_two_lines_material, parent, false)
-        return ItemResultViewHolder(view, callback)
+        return ItemResultViewHolder(view, picasso, callback)
     }
 
     override fun onBindViewHolder(holder: ItemResultViewHolder, position: Int) {

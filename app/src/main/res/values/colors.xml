@@ -5,4 +5,9 @@
     <color name="colorAccent">#D81B60</color>
 
     <color name="blue_grey_50_200">#ECEFF1</color>
+
+    <!--60 % black-->
+    <color name="icon_inactive_light">#99000000</color>
+    <!--60 % black-->
+    <color name="icon_disable_light">#61000000</color>
 </resources>

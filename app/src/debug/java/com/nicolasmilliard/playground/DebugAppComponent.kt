@@ -10,6 +10,7 @@ import javax.inject.Singleton
 @Singleton
 @Component(
     modules = [
+        PhotoServiceModule::class,
         HomeServiceModule::class,
         HomePresenterModule::class,
         MainActivityModule::class,

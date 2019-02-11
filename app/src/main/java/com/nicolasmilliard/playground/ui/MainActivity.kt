@@ -9,7 +9,6 @@ import butterknife.BindView
 import butterknife.ButterKnife.bind
 import com.google.android.material.bottomappbar.BottomAppBar
 import com.nicolasmilliard.playground.R
-import com.nicolasmilliard.playground.ui.home.HomeFragmentModule
 import dagger.Module
 import dagger.android.AndroidInjection
 import dagger.android.AndroidInjector
@@ -52,6 +51,6 @@ class MainActivity : AppCompatActivity(), HasSupportFragmentInjector {
 
 @Module
 abstract class MainActivityModule {
-    @ContributesAndroidInjector(modules = [HomeFragmentModule::class])
+    @ContributesAndroidInjector(modules = [FragmentBuildersModule::class])
     abstract fun contributeMainActivity(): MainActivity
 }

@@ -130,7 +130,7 @@ object Config {
         const val timber = "com.jakewharton.timber:timber:4.7.1"
         const val rxJava = "io.reactivex.rxjava2:rxjava:2.2.6"
         const val rxRelay = "com.jakewharton.rxrelay2:rxrelay:2.1.0"
-        const val picasso = "com.squareup.picasso:picasso:2.71828"
+        const val picasso = "com.squareup.picasso3:picasso:3.0.0-SNAPSHOT"
         const val okHttp = "com.squareup.okhttp3:okhttp:3.13.1"
         const val okIo = "com.squareup.okio:okio:2.2.2"
         const val shimmer = "com.facebook.shimmer:shimmer:0.4.0"

@@ -2,9 +2,6 @@
 
 ## TODO
 - use dagger reflect when ready : https://github.com/JakeWharton/dagger-reflect
-- Loading icon theme
-- Coroutines channels
-- Loading screen state
 - multi module 
 - Kotlin multi platform
 - RecyclerView with Paging
