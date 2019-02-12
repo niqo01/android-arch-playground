@@ -4,6 +4,8 @@ object Config {
 
     const val buildToolsVersion = "28.0.3"
 
+    private const val navigationVersion = "1.0.0-beta02"
+
     object Versions {
         const val major = 1
         const val minor = 0
@@ -24,7 +26,7 @@ object Config {
     object Plugins {
         const val android = "com.android.tools.build:gradle:3.3.0"
         const val ktlint = "org.jlleitschuh.gradle:ktlint-gradle:6.3.1"
-        const val archNavigation = "android.arch.navigation:navigation-safe-args-gradle-plugin:1.0.0-alpha11"
+        const val archNavigation = "android.arch.navigation:navigation-safe-args-gradle-plugin:$navigationVersion"
         const val ossLicenses = "com.google.android.gms:oss-licenses-plugin:0.9.3"
         const val gradleVersions = "com.github.ben-manes:gradle-versions-plugin:0.20.0"
     }
@@ -62,7 +64,7 @@ object Config {
         }
 
         object Arch {
-            private const val navigationVersion = "1.0.0-beta01"
+
             private const val workVersion = "1.0.0-beta05"
 
             const val navigationFragmentKtx = "android.arch.navigation:navigation-fragment-ktx:$navigationVersion"
