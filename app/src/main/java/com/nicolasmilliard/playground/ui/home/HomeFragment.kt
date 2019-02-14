@@ -14,6 +14,7 @@ import com.nicolasmilliard.playground.ui.bindTo
 import com.squareup.picasso3.Picasso
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.Dispatchers.Main
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.launch
 import javax.inject.Inject
@@ -37,7 +38,7 @@ class HomeFragment : Fragment(), Injectable {
         homeViewModel = ViewModelProviders.of(this, homeViewModelFactory).get()
         lifecycle.addObserver(picasso)
 
-        scope.launch(Dispatchers.Unconfined) {
+        scope.launch(Main.immediate) {
             val binder = HomeUiBinder(view, picasso)
             binder.bindTo(homeViewModel)
         }
