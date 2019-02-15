@@ -12,7 +12,7 @@ import kotlinx.coroutines.channels.SendChannel
 import kotlinx.coroutines.launch
 import timber.log.Timber
 
-class HomeViewModel(private val homeService: HomeService) : ViewModel(), Presenter<Model, Event> {
+class HomePresenter(private val homeService: HomeService) : ViewModel(), Presenter<Model, Event> {
 
     private val _models = ConflatedBroadcastChannel<Model>()
     override val models: ReceiveChannel<Model> get() = _models.openSubscription()
@@ -43,9 +43,9 @@ class HomeViewModel(private val homeService: HomeService) : ViewModel(), Present
     class HomeViewModelFactory constructor(private val homeService: HomeService) :
         ViewModelProvider.NewInstanceFactory() {
         override fun <T : ViewModel?> create(modelClass: Class<T>): T {
-            if (modelClass.isAssignableFrom(HomeViewModel::class.java)) {
+            if (modelClass.isAssignableFrom(HomePresenter::class.java)) {
                 @Suppress("UNCHECKED_CAST")
-                return HomeViewModel(homeService) as T
+                return HomePresenter(homeService) as T
             }
             throw IllegalStateException("Impossibles")
         }

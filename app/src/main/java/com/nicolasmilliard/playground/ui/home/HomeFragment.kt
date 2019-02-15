@@ -8,7 +8,7 @@ import androidx.lifecycle.ViewModelProviders
 import androidx.lifecycle.get
 import com.nicolasmilliard.playground.R
 import com.nicolasmilliard.playground.Screen
-import com.nicolasmilliard.playground.presenter.HomeViewModel
+import com.nicolasmilliard.playground.presenter.HomePresenter
 import com.nicolasmilliard.playground.ui.Injectable
 import com.nicolasmilliard.playground.ui.bindTo
 import com.squareup.picasso3.Picasso
@@ -29,18 +29,18 @@ class HomeFragment : Fragment(), Injectable {
     @field:Screen
     lateinit var picasso: Picasso
     @Inject
-    lateinit var homeViewModelFactory: HomeViewModel.HomeViewModelFactory
-    private lateinit var homeViewModel: HomeViewModel
+    lateinit var homePresenterFactory: HomePresenter.HomeViewModelFactory
+    private lateinit var homePresenter: HomePresenter
 
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        homeViewModel = ViewModelProviders.of(this, homeViewModelFactory).get()
+        homePresenter = ViewModelProviders.of(this, homePresenterFactory).get()
         lifecycle.addObserver(picasso)
 
         scope.launch(Main.immediate) {
             val binder = HomeUiBinder(view, picasso)
-            binder.bindTo(homeViewModel)
+            binder.bindTo(homePresenter)
         }
     }
 
