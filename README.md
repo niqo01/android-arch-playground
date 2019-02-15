@@ -1,12 +1,16 @@
 # Arch and Coroutines PlayGround
 
 ## TODO
-- use dagger reflect when ready : https://github.com/JakeWharton/dagger-reflect
-- multi module 
-- Kotlin multi platform
-- RecyclerView with Paging
-- Instant app
-- ViewPager 2
-- Dymanic Animation
-- Constraint Layout 2
 - Picasso 3
+- Navigation 
+* subgraph (Eg: login)
+* Shared Element Transitions  
+- Animate Bottom app bar on scroll
+- Show/Hide Bottom app bar
+- RecyclerView with Paging
+- Write a work with WorkManager
+- Instant app
+- FragmentFactory
+- Kotlin multi platform
+- ViewPager 2
+- use dagger reflect: https://github.com/JakeWharton/dagger-reflect
