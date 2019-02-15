@@ -1,11 +1,11 @@
-package com.nicolasmilliard.playground.service
+package com.nicolasmilliard.playground.api
 
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.withContext
 
-class HomeServiceImpl : HomeService {
-    override suspend fun loadData() = withContext(Dispatchers.IO) {
+class ItemServiceImpl : ItemService {
+    override suspend fun load() = withContext(Dispatchers.IO) {
         delay(3000) // Doing IO operations
         listOf(
             Item(

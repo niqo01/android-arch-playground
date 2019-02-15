@@ -1,7 +1,7 @@
 package com.nicolasmilliard.playground.ui.home
 
 import androidx.navigation.NavController
-import com.nicolasmilliard.playground.service.Item
+import com.nicolasmilliard.playground.api.Item
 
 class OpenItemDetailsHandler(
     private val navController: NavController

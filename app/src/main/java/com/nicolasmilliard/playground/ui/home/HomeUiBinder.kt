@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.facebook.shimmer.ShimmerFrameLayout
 import com.nicolasmilliard.playground.R
 import com.nicolasmilliard.playground.presenter.Model
-import com.nicolasmilliard.playground.service.Item
+import com.nicolasmilliard.playground.api.Item
 import com.nicolasmilliard.playground.ui.UiBinder
 import com.nicolasmilliard.playground.ui.util.displayedChildId
 import com.nicolasmilliard.playground.ui.util.getDividerInsetLeftDrawable

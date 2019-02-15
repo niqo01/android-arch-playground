@@ -1,8 +1,8 @@
 package com.nicolasmilliard.playground.presenter
 
 import com.google.common.truth.Truth.assertThat
-import com.nicolasmilliard.playground.service.HomeService
-import com.nicolasmilliard.playground.service.Item
+import com.nicolasmilliard.playground.api.ItemService
+import com.nicolasmilliard.playground.api.Item
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.runBlocking
@@ -19,7 +19,7 @@ class HomePresenterTest {
     @Before
     fun setup() {
         Dispatchers.setMain(Dispatchers.Unconfined)
-        presenter = HomePresenter(FakeHomeService())
+        presenter = HomePresenter(FakeItemService())
     }
 
     @After
@@ -44,8 +44,8 @@ class HomePresenterTest {
         assertThat(model!!.data[0]).isEqualTo(TEST_DATA)
     }
 
-    class FakeHomeService : HomeService {
-        override suspend fun loadData(): List<Item> {
+    class FakeItemService : ItemService {
+        override suspend fun load(): List<Item> {
             delay(50)
             return listOf(TEST_DATA)
         }

@@ -5,7 +5,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import com.nicolasmilliard.playground.R
-import com.nicolasmilliard.playground.service.Item
+import com.nicolasmilliard.playground.api.Item
 import com.squareup.picasso3.Picasso
 
 internal class ItemResultAdapter(

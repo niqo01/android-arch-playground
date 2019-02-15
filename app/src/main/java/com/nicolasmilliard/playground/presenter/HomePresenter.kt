@@ -3,15 +3,15 @@ package com.nicolasmilliard.playground.presenter
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.viewModelScope
-import com.nicolasmilliard.playground.service.HomeService
-import com.nicolasmilliard.playground.service.Item
+import com.nicolasmilliard.playground.api.ItemService
+import com.nicolasmilliard.playground.api.Item
 import kotlinx.coroutines.channels.Channel
 import kotlinx.coroutines.channels.ConflatedBroadcastChannel
 import kotlinx.coroutines.channels.ReceiveChannel
 import kotlinx.coroutines.channels.SendChannel
 import kotlinx.coroutines.launch
 
-class HomePresenter(private val homeService: HomeService) : ViewModel(), Presenter<Model, Event> {
+class HomePresenter(private val itemService: ItemService) : ViewModel(), Presenter<Model, Event> {
 
     private val _models = ConflatedBroadcastChannel<Model>()
     override val models: ReceiveChannel<Model> get() = _models.openSubscription()
@@ -32,18 +32,18 @@ class HomePresenter(private val homeService: HomeService) : ViewModel(), Present
             }
             sendModel(model)
             launch {
-                val data = homeService.loadData()
+                val data = itemService.load()
                 sendModel(model.copy(false, data))
             }
         }
     }
 
-    class HomeViewModelFactory constructor(private val homeService: HomeService) :
+    class HomeViewModelFactory constructor(private val itemService: ItemService) :
         ViewModelProvider.NewInstanceFactory() {
         override fun <T : ViewModel?> create(modelClass: Class<T>): T {
             if (modelClass.isAssignableFrom(HomePresenter::class.java)) {
                 @Suppress("UNCHECKED_CAST")
-                return HomePresenter(homeService) as T
+                return HomePresenter(itemService) as T
             }
             throw IllegalStateException("Impossibles")
         }

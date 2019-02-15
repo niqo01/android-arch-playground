@@ -108,6 +108,7 @@ android {
 
 dependencies {
 
+    implementation(project(":item-api"))
     debugImplementation(Config.Libs.LeakCanary.leakCanary)
     releaseImplementation(Config.Libs.LeakCanary.leakCanaryNoop)
     debugImplementation(Config.Libs.LeakCanary.leakCanaryFragments)

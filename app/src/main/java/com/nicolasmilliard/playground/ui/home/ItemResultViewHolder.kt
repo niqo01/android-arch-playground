@@ -8,7 +8,7 @@ import android.widget.TextView
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import com.nicolasmilliard.playground.R
-import com.nicolasmilliard.playground.service.Item
+import com.nicolasmilliard.playground.api.Item
 import com.nicolasmilliard.playground.ui.util.RoundedTransformation
 import com.squareup.picasso3.Picasso
 
