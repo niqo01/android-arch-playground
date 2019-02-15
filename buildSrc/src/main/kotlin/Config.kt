@@ -121,7 +121,7 @@ object Config {
         object Test {
             const val junit = "androidx.test.ext:junit:1.1.0"
             const val truth = "androidx.test.ext:truth:1.1.0"
-            const val robolectric = "org.robolectric:robolectric:4.1"
+            const val robolectric = "org.robolectric:robolectric:4.2"
 
             const val espressoCore = "androidx.test.espresso:espresso-core:3.1.1"
             const val rules = "com.android.support.test:rules:1.0.2"
