@@ -20,9 +20,9 @@ class NavigationBottomSheet : BottomSheetDialogFragment() {
             setNavigationItemSelectedListener {
                 navController.navigate(
                     when (it.itemId) {
-                        R.id.homeFragment -> R.id.action_global_homeFragment
-                        R.id.dashboardFragment -> R.id.action_global_dashboardFragment
-                        R.id.notificationsFragment -> R.id.action_global_notificationsFragment
+                        R.id.homeScreen -> R.id.action_global_homeScreen
+                        R.id.dashboardScreen -> R.id.action_global_dashboardScreen
+                        R.id.notificationsScreen -> R.id.action_global_notificationsScreen
                         else -> throw IllegalStateException("Unsupported ID")
                     }
                 )

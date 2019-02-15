@@ -21,7 +21,7 @@ import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 @ContentView(R.layout.screen_home)
-class HomeFragment : Fragment(), Injectable {
+class HomeScreen : Fragment(), Injectable {
 
     private val binderJob = Job()
     private val scope = CoroutineScope(Dispatchers.Main + binderJob)

@@ -8,7 +8,7 @@ class OpenItemDetailsHandler(
 ) : ItemHandler {
     override fun invoke(item: Item) {
         val action =
-            HomeFragmentDirections.actionHomeFragmentToDetailFragment(
+            HomeScreenDirections.actionHomeScreenToItemDetailScreen(
                 "Test"
             )
         navController.navigate(action)

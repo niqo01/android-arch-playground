@@ -1,7 +1,7 @@
 package com.nicolasmilliard.playground.ui
 
 import com.nicolasmilliard.playground.ScreenScope
-import com.nicolasmilliard.playground.ui.home.HomeFragment
+import com.nicolasmilliard.playground.ui.home.HomeScreen
 import dagger.Module
 import dagger.android.ContributesAndroidInjector
 
@@ -11,5 +11,5 @@ abstract class FragmentBuildersModule {
 
     @ScreenScope
     @ContributesAndroidInjector(modules = [FragmentModule::class])
-    abstract fun contributeHomeFragment(): HomeFragment
+    abstract fun contributeHomeFragment(): HomeScreen
 }

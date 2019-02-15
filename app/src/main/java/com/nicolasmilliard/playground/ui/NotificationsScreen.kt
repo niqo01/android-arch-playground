@@ -13,7 +13,7 @@ import com.google.android.material.snackbar.Snackbar
 import com.nicolasmilliard.playground.R
 
 @ContentView(R.layout.screen_notifications)
-class NotificationsFragment : Fragment() {
+class NotificationsScreen : Fragment() {
 
     lateinit var navController: NavController
     lateinit var unbinder: Unbinder
@@ -40,7 +40,7 @@ class NotificationsFragment : Fragment() {
     @OnClick(R.id.setting_button)
     internal fun onSettingsClick() {
         val action =
-            NotificationsFragmentDirections.actionNotificationsFragmentToSettingsFragment()
+            NotificationsScreenDirections.actionNotificationsScreenToSettingsScreen()
         navController.navigate(action)
     }
 }
