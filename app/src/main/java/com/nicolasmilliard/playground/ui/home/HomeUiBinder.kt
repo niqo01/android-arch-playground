@@ -17,7 +17,8 @@ import com.squareup.picasso3.Picasso
 
 class HomeUiBinder(
     view: View,
-    picasso: Picasso
+    picasso: Picasso,
+    onClick: ItemHandler
 ) : UiBinder<Model> {
     private val context = view.context
 
@@ -27,9 +28,7 @@ class HomeUiBinder(
 
     private val resultsAdapter =
         ItemResultAdapter(context.layoutInflater, picasso, object : ItemResultAdapter.Callback {
-            override fun onItemClicked(item: Item) {
-                TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
-            }
+            override fun onItemClicked(item: Item) = onClick(item)
         })
 
     init {

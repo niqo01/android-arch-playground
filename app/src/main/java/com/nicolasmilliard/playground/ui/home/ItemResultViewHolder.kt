@@ -19,7 +19,7 @@ internal class ItemResultViewHolder(
 ) : ViewHolder(root), OnClickListener {
 
     private val context = root.context
-    private val accountIcon: Drawable = context.getDrawable(R.drawable.ic_account_circle_black_40dp)
+    private val accountIcon: Drawable = context.getDrawable(R.drawable.ic_account_circle_black_40dp)!!
     private val roundedTransformation: RoundedTransformation
 
     private val imageView: ImageView = root.findViewById(R.id.image)

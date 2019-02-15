@@ -9,6 +9,7 @@ import androidx.navigation.findNavController
 import butterknife.ButterKnife.bind
 import butterknife.OnClick
 import butterknife.Unbinder
+import com.google.android.material.snackbar.Snackbar
 import com.nicolasmilliard.playground.R
 
 @ContentView(R.layout.screen_notifications)
@@ -30,11 +31,10 @@ class NotificationsFragment : Fragment() {
 
     @OnClick(R.id.button)
     internal fun onButton() {
-        val action =
-            NotificationsFragmentDirections.actionNotificationsFragmentToDetailFragment(
-                "Test"
-            )
-        navController.navigate(action)
+        Snackbar
+            .make(requireView(), R.string.applicationId, Snackbar.LENGTH_INDEFINITE)
+            .setAction(R.string.action_dismiss) {}
+            .show()
     }
 
     @OnClick(R.id.setting_button)

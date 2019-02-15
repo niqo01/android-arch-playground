@@ -6,6 +6,7 @@ import androidx.annotation.ContentView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProviders
 import androidx.lifecycle.get
+import androidx.navigation.fragment.findNavController
 import com.nicolasmilliard.playground.R
 import com.nicolasmilliard.playground.Screen
 import com.nicolasmilliard.playground.presenter.HomePresenter
@@ -38,8 +39,10 @@ class HomeFragment : Fragment(), Injectable {
         homePresenter = ViewModelProviders.of(this, homePresenterFactory).get()
         lifecycle.addObserver(picasso)
 
+        val onClick = OpenItemDetailsHandler(findNavController())
+
         scope.launch(Main.immediate) {
-            val binder = HomeUiBinder(view, picasso)
+            val binder = HomeUiBinder(view, picasso, onClick)
             binder.bindTo(homePresenter)
         }
     }
@@ -48,6 +51,4 @@ class HomeFragment : Fragment(), Injectable {
         super.onDestroyView()
         binderJob.cancel()
     }
-
-
 }

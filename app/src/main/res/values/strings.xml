@@ -5,6 +5,7 @@
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
 
+    <string name="action_dismiss">Dismiss</string>
     <string name="screen_error">Loading screen failed</string>
     <string name="hello_home_fragment">Hello Home fragment</string>
     <string name="hello_dashboard_fragment">Hello Dashboard fragment</string>
