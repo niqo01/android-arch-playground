@@ -10,7 +10,6 @@ import kotlinx.coroutines.channels.ConflatedBroadcastChannel
 import kotlinx.coroutines.channels.ReceiveChannel
 import kotlinx.coroutines.channels.SendChannel
 import kotlinx.coroutines.launch
-import timber.log.Timber
 
 class HomePresenter(private val homeService: HomeService) : ViewModel(), Presenter<Model, Event> {
 
@@ -36,7 +35,6 @@ class HomePresenter(private val homeService: HomeService) : ViewModel(), Present
                 val data = homeService.loadData()
                 sendModel(model.copy(false, data))
             }
-            Timber.i("")
         }
     }
 

@@ -1,6 +1,7 @@
 package com.nicolasmilliard.playground
 
 import com.nicolasmilliard.playground.service.HomeService
+import com.nicolasmilliard.playground.service.HomeServiceImpl
 import dagger.Module
 import dagger.Provides
 import javax.inject.Singleton
@@ -12,6 +13,6 @@ object HomeServiceModule {
     @Provides
     @Singleton
     fun provideHomeService(): HomeService {
-        return HomeService()
+        return HomeServiceImpl()
     }
 }
