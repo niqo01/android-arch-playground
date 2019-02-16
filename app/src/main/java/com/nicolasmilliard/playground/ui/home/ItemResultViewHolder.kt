@@ -1,5 +1,6 @@
 package com.nicolasmilliard.playground.ui.home
 
+import android.graphics.Bitmap
 import android.graphics.drawable.Drawable
 import android.view.View
 import android.view.View.OnClickListener
@@ -49,7 +50,8 @@ internal class ItemResultViewHolder(
 
         picasso.load(item.imageUrl)
             .placeholder(accountIcon)
-//            .transform(roundedTransformation) TODO Issue with HARDWARE bitmap
+            .config(Bitmap.Config.RGB_565)
+            .transform(roundedTransformation)
             .noFade()
             .into(imageView)
     }
