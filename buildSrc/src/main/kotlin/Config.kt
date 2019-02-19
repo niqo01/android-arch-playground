@@ -101,7 +101,7 @@ object Config {
         }
 
         object ButterKnife {
-            private const val version = "10.0.0"
+            private const val version = "10.1.0"
 
             const val core = "com.jakewharton:butterknife:$version"
             const val compiler = "com.jakewharton:butterknife-compiler:$version"
