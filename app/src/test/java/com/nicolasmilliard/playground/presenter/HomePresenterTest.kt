@@ -1,8 +1,8 @@
 package com.nicolasmilliard.playground.presenter
 
 import com.google.common.truth.Truth.assertThat
-import com.nicolasmilliard.playground.api.ItemService
 import com.nicolasmilliard.playground.api.Item
+import com.nicolasmilliard.playground.api.ItemService
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.runBlocking

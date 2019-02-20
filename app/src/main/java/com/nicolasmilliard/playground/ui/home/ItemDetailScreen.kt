@@ -5,7 +5,7 @@ import androidx.annotation.ContentView
 import androidx.fragment.app.Fragment
 import com.nicolasmilliard.playground.R
 
-@ContentView(R.layout.screen_detail)
+@ContentView(R.layout.screen_item_detail)
 class ItemDetailScreen : Fragment() {
 
     private var param1: String? = null

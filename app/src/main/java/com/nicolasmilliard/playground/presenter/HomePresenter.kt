@@ -3,8 +3,8 @@ package com.nicolasmilliard.playground.presenter
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.viewModelScope
-import com.nicolasmilliard.playground.api.ItemService
 import com.nicolasmilliard.playground.api.Item
+import com.nicolasmilliard.playground.api.ItemService
 import kotlinx.coroutines.channels.Channel
 import kotlinx.coroutines.channels.ConflatedBroadcastChannel
 import kotlinx.coroutines.channels.ReceiveChannel

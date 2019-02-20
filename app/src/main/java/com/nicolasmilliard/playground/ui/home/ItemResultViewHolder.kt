@@ -40,9 +40,9 @@ internal class ItemResultViewHolder(
         callback.onItemClicked(item!!)
     }
 
-    fun update(itemResult: ItemResult) {
-        val item = itemResult.item
-        this.item = itemResult.item
+    fun update(resultItem: ResultItem) {
+        val item = resultItem.item
+        this.item = resultItem.item
 
         titleText.text = item.name
         secondaryText.text = item.description

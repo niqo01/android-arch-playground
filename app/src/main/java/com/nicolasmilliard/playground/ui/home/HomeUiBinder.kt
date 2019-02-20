@@ -7,8 +7,8 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.facebook.shimmer.ShimmerFrameLayout
 import com.nicolasmilliard.playground.R
-import com.nicolasmilliard.playground.presenter.Model
 import com.nicolasmilliard.playground.api.Item
+import com.nicolasmilliard.playground.presenter.Model
 import com.nicolasmilliard.playground.ui.UiBinder
 import com.nicolasmilliard.playground.ui.util.displayedChildId
 import com.nicolasmilliard.playground.ui.util.getDividerInsetLeftDrawable
@@ -35,11 +35,12 @@ class HomeUiBinder(
         results.adapter = resultsAdapter
 
         val layoutManager = LinearLayoutManager(context)
-        val dividerItemDecoration = DividerItemDecoration(context, layoutManager.orientation)
+        val dividerItemDecoration = HomeItemDivider(context, layoutManager.orientation)
         dividerItemDecoration.setDrawable(context.getDividerInsetLeftDrawable(R.dimen.divider_padding_72))
 
         results.layoutManager = layoutManager
         results.addItemDecoration(dividerItemDecoration)
+        results.setHasFixedSize(true)
     }
 
     override fun bind(model: Model, oldModel: Model?) {
@@ -52,7 +53,8 @@ class HomeUiBinder(
         }
 
         val data = model.data
-        val itemResults = data.map { ItemResult(it) }
+        val itemResults =
+            listOf(HeaderItem(context.getString(R.string.home_screen_header))) + data.map { ResultItem(it) }
         resultsAdapter.submitList(itemResults)
     }
 }
