@@ -13,7 +13,7 @@ buildscript {
         classpath(Config.Plugins.android)
         classpath(kotlin("gradle-plugin", version = Config.kotlinVersion))
         classpath(Config.Plugins.ktlint)
-        classpath(Config.Plugins.archNavigation)
+        classpath(Config.Plugins.navigation)
         classpath(Config.Plugins.ossLicenses)
         classpath(Config.Plugins.gradleVersions)
         // NOTE: Do not place your application dependencies here; they belong

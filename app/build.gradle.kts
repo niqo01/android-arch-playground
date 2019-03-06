@@ -130,13 +130,12 @@ dependencies {
     implementation(Config.Libs.AndroidX.pagingRuntimeKtx)
     implementation(Config.Libs.AndroidX.dynamicAnimation)
     implementation(Config.Libs.AndroidX.viewPager2)
+    implementation(Config.Libs.AndroidX.navigationFragmentKtx)
+    implementation(Config.Libs.AndroidX.navigationUiKtx)
+    implementation(Config.Libs.AndroidX.workRuntimeKtx)
+    implementation(Config.Libs.AndroidX.workRxJava)
 
     implementation(Config.Libs.material)
-
-    implementation(Config.Libs.Arch.navigationFragmentKtx)
-    implementation(Config.Libs.Arch.navigationUiKtx)
-    implementation(Config.Libs.Arch.workRuntimeKtx)
-    implementation(Config.Libs.Arch.workRxJava)
 
     implementation(Config.Libs.PlayServices.ossLicenses)
 
@@ -171,7 +170,7 @@ dependencies {
     testImplementation(Config.Libs.Kotlin.Coroutine.test)
     testImplementation(Config.Libs.AndroidX.pagingCommon)
     testImplementation(Config.Libs.AndroidX.fragmentTesting)
-    testImplementation(Config.Libs.Arch.workTesting)
+    testImplementation(Config.Libs.AndroidX.workTesting)
 }
 
 

@@ -4,7 +4,7 @@ object Config {
 
     const val buildToolsVersion = "28.0.3"
 
-    private const val navigationVersion = "1.0.0-rc02"
+    private const val navigationVersion = "2.0.0-rc02"
 
     object Versions {
         const val major = 1
@@ -26,7 +26,7 @@ object Config {
     object Plugins {
         const val android = "com.android.tools.build:gradle:3.3.1"
         const val ktlint = "org.jlleitschuh.gradle:ktlint-gradle:6.3.1"
-        const val archNavigation = "android.arch.navigation:navigation-safe-args-gradle-plugin:$navigationVersion"
+        const val navigation = "androidx.navigation:navigation-safe-args-gradle-plugin:$navigationVersion"
         const val ossLicenses = "com.google.android.gms:oss-licenses-plugin:0.9.3"
         const val gradleVersions = "com.github.ben-manes:gradle-versions-plugin:0.20.0"
     }
@@ -46,6 +46,7 @@ object Config {
         object AndroidX {
             private const val pagingVersion = "2.1.0"
             private const val fragmentVersion = "1.1.0-alpha04"
+            private const val workVersion = "1.0.0"
 
             const val appCompat = "androidx.appcompat:appcompat:1.1.0-alpha02"
             const val activityKtx = "androidx.activity:activity-ktx:1.0.0-alpha04"
@@ -61,14 +62,8 @@ object Config {
             const val pagingCommon = "androidx.paging:paging-common:$pagingVersion"
             const val viewPager2 = "androidx.viewpager2:viewpager2:1.0.0-alpha01"
             const val dynamicAnimation = "androidx.dynamicanimation:dynamicanimation-ktx:1.0.0-alpha01"
-        }
-
-        object Arch {
-
-            private const val workVersion = "1.0.0"
-
-            const val navigationFragmentKtx = "android.arch.navigation:navigation-fragment-ktx:$navigationVersion"
-            const val navigationUiKtx = "android.arch.navigation:navigation-ui-ktx:$navigationVersion"
+            const val navigationFragmentKtx = "androidx.navigation:navigation-fragment-ktx:$navigationVersion"
+            const val navigationUiKtx = "androidx.navigation:navigation-ui-ktx:$navigationVersion"
             const val workRuntimeKtx = "android.arch.work:work-runtime-ktx:$workVersion"
             const val workRxJava = "android.arch.work:work-rxjava2:$workVersion"
             const val workTesting = "android.arch.work:work-testing:$workVersion"
