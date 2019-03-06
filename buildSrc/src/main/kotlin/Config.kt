@@ -65,7 +65,7 @@ object Config {
 
         object Arch {
 
-            private const val workVersion = "1.0.0-rc02"
+            private const val workVersion = "1.0.0"
 
             const val navigationFragmentKtx = "android.arch.navigation:navigation-fragment-ktx:$navigationVersion"
             const val navigationUiKtx = "android.arch.navigation:navigation-ui-ktx:$navigationVersion"
