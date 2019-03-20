@@ -52,7 +52,7 @@ object Config {
             const val activityKtx = "androidx.activity:activity-ktx:1.0.0-alpha04"
             const val fragmentKtx = "androidx.fragment:fragment-ktx:$fragmentVersion"
             const val fragmentTesting = "androidx.fragment:fragment-testing:$fragmentVersion"
-            const val preferenceKtx = "androidx.preference:preference-ktx:1.1.0-alpha03"
+            const val preferenceKtx = "androidx.preference:preference-ktx:1.1.0-alpha04"
             const val coreKtx = "androidx.core:core-ktx:1.1.0-alpha04"
             const val constraintLayout = "androidx.constraintlayout:constraintlayout:2.0.0-alpha3"
             const val recyclerView = "androidx.recyclerview:recyclerview:1.1.0-alpha03"
