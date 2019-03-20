@@ -33,7 +33,6 @@ class HomeScreen : Fragment(), Injectable {
     lateinit var homePresenterFactory: HomePresenter.HomeViewModelFactory
     private lateinit var homePresenter: HomePresenter
 
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         homePresenter = ViewModelProviders.of(this, homePresenterFactory).get()

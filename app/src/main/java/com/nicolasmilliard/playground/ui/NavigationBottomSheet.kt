@@ -1,6 +1,5 @@
 package com.nicolasmilliard.playground.ui
 
-
 import android.os.Bundle
 import android.view.View
 import androidx.annotation.ContentView

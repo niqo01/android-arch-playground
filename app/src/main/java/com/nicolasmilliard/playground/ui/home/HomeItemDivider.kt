@@ -9,7 +9,6 @@ import android.view.View
 import android.widget.LinearLayout
 import androidx.recyclerview.widget.RecyclerView
 
-
 class HomeItemDivider(context: Context, orientation: Int) : RecyclerView.ItemDecoration() {
 
     private var mDivider: Drawable? = null
@@ -134,7 +133,9 @@ class HomeItemDivider(context: Context, orientation: Int) : RecyclerView.ItemDec
     }
 
     override fun getItemOffsets(
-        outRect: Rect, view: View, parent: RecyclerView,
+        outRect: Rect,
+        view: View,
+        parent: RecyclerView,
         state: RecyclerView.State
     ) {
         if (mDivider == null) {

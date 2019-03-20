@@ -1,6 +1,10 @@
 package com.nicolasmilliard.playground.ui.util
 
-import android.graphics.*
+import android.graphics.Bitmap
+import android.graphics.BitmapShader
+import android.graphics.Canvas
+import android.graphics.Paint
+import android.graphics.Shader
 import com.squareup.picasso3.RequestHandler
 import com.squareup.picasso3.Transformation
 

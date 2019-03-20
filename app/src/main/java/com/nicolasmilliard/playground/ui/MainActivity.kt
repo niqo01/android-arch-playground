@@ -19,7 +19,6 @@ import javax.inject.Inject
 
 class MainActivity : AppCompatActivity(), HasSupportFragmentInjector {
 
-
     @BindView(R.id.bottom_app_bar)
     lateinit var bottomNav: BottomAppBar
 

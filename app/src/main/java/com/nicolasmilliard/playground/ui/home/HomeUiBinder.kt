@@ -2,7 +2,6 @@ package com.nicolasmilliard.playground.ui.home
 
 import android.view.View
 import android.widget.ViewAnimator
-import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.facebook.shimmer.ShimmerFrameLayout

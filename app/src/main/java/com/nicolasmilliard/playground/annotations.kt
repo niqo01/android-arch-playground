@@ -1,6 +1,5 @@
 package com.nicolasmilliard.playground
 
-
 import javax.inject.Qualifier
 import javax.inject.Scope
 
@@ -18,7 +17,6 @@ annotation class Root
 @MustBeDocumented
 @Retention(AnnotationRetention.RUNTIME)
 annotation class Screen
-
 
 @Scope
 @Retention(AnnotationRetention.RUNTIME)

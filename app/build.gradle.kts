@@ -99,7 +99,6 @@ android {
         // We run a full lint analysis as build part in CI, so skip vital checks for assemble task.
         isCheckReleaseBuilds = false
 
-
         testOptions {
             unitTests.isIncludeAndroidResources = true
         }
@@ -172,7 +171,6 @@ dependencies {
     testImplementation(Config.Libs.AndroidX.fragmentTesting)
     testImplementation(Config.Libs.AndroidX.workTesting)
 }
-
 
 fun gitSha(): String {
     val f = File(buildDir, "commit-sha.txt")
