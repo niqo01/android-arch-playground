@@ -45,7 +45,7 @@ object Config {
 
         object AndroidX {
             private const val pagingVersion = "2.1.0"
-            private const val fragmentVersion = "1.1.0-alpha04"
+            private const val fragmentVersion = "1.1.0-alpha05"
             private const val workVersion = "1.0.0"
 
             const val appCompat = "androidx.appcompat:appcompat:1.1.0-alpha02"
