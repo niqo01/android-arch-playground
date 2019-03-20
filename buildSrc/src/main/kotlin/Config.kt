@@ -83,7 +83,7 @@ object Config {
 
         object Dagger {
             private const val version = "2.21"
-            private const val assistedInjectVersion = "0.3.2"
+            private const val assistedInjectVersion = "0.3.3"
 
             const val core = "com.google.dagger:dagger:$version"
             const val compiler = "com.google.dagger:dagger-compiler:$version"
