@@ -56,7 +56,7 @@ object Config {
             const val coreKtx = "androidx.core:core-ktx:1.1.0-alpha04"
             const val constraintLayout = "androidx.constraintlayout:constraintlayout:2.0.0-alpha3"
             const val recyclerView = "androidx.recyclerview:recyclerview:1.1.0-alpha03"
-            const val viewModelKtx = "androidx.lifecycle:lifecycle-viewmodel-ktx:2.1.0-alpha02"
+            const val viewModelKtx = "androidx.lifecycle:lifecycle-viewmodel-ktx:2.1.0-alpha03"
             const val pagingRx = "androidx.paging:paging-rxjava2:$pagingVersion"
             const val pagingRuntimeKtx = "androidx.paging:paging-runtime-ktx:$pagingVersion"
             const val pagingCommon = "androidx.paging:paging-common:$pagingVersion"
