@@ -48,7 +48,7 @@ object Config {
             private const val fragmentVersion = "1.1.0-alpha05"
             private const val workVersion = "1.0.0"
 
-            const val appCompat = "androidx.appcompat:appcompat:1.1.0-alpha02"
+            const val appCompat = "androidx.appcompat:appcompat:1.1.0-alpha03"
             const val activityKtx = "androidx.activity:activity-ktx:1.0.0-alpha04"
             const val fragmentKtx = "androidx.fragment:fragment-ktx:$fragmentVersion"
             const val fragmentTesting = "androidx.fragment:fragment-testing:$fragmentVersion"
