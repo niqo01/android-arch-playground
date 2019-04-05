@@ -1,12 +1,10 @@
 package com.nicolasmilliard.playground.ui.home
 
 import android.os.Bundle
-import androidx.annotation.ContentView
 import androidx.fragment.app.Fragment
 import com.nicolasmilliard.playground.R
 
-@ContentView(R.layout.screen_item_detail)
-class ItemDetailScreen : Fragment() {
+class ItemDetailScreen : Fragment(R.layout.screen_item_detail) {
 
     private var param1: String? = null
 

@@ -12,8 +12,7 @@ import butterknife.Unbinder
 import com.google.android.material.snackbar.Snackbar
 import com.nicolasmilliard.playground.R
 
-@ContentView(R.layout.screen_notifications)
-class NotificationsScreen : Fragment() {
+class NotificationsScreen : Fragment(R.layout.screen_notifications) {
 
     lateinit var navController: NavController
     lateinit var unbinder: Unbinder

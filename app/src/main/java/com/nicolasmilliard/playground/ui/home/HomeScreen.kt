@@ -2,7 +2,6 @@ package com.nicolasmilliard.playground.ui.home
 
 import android.os.Bundle
 import android.view.View
-import androidx.annotation.ContentView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProviders
 import androidx.lifecycle.get
@@ -20,8 +19,7 @@ import kotlinx.coroutines.Job
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
-@ContentView(R.layout.screen_home)
-class HomeScreen : Fragment(), Injectable {
+class HomeScreen : Fragment(R.layout.screen_home), Injectable {
 
     private val binderJob = Job()
     private val scope = CoroutineScope(Dispatchers.Main + binderJob)
