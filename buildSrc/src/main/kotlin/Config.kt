@@ -4,7 +4,7 @@ object Config {
 
     const val buildToolsVersion = "28.0.3"
 
-    private const val navigationVersion = "2.1.0-alpha01"
+    private const val navigationVersion = "2.1.0-alpha02"
 
     object Versions {
         const val major = 1
@@ -45,23 +45,23 @@ object Config {
 
         object AndroidX {
             private const val pagingVersion = "2.1.0"
-            private const val fragmentVersion = "1.1.0-alpha05"
+            private const val fragmentVersion = "1.1.0-alpha06"
             private const val workVersion = "1.0.0"
 
-            const val appCompat = "androidx.appcompat:appcompat:1.0.0-alpha05"
-            const val activityKtx = "androidx.activity:activity-ktx:1.0.0-alpha05"
+            const val appCompat = "androidx.appcompat:appcompat:1.1.0-alpha04"
+            const val activityKtx = "androidx.activity:activity-ktx:1.0.0-alpha06"
             const val fragmentKtx = "androidx.fragment:fragment-ktx:$fragmentVersion"
             const val fragmentTesting = "androidx.fragment:fragment-testing:$fragmentVersion"
             const val preferenceKtx = "androidx.preference:preference-ktx:1.1.0-alpha04"
             const val coreKtx = "androidx.core:core-ktx:1.1.0-alpha05"
-            const val constraintLayout = "androidx.constraintlayout:constraintlayout:2.0.0-alpha3"
-            const val recyclerView = "androidx.recyclerview:recyclerview:1.1.0-alpha03"
-            const val viewModelKtx = "androidx.lifecycle:lifecycle-viewmodel-ktx:2.1.0-alpha03"
+            const val constraintLayout = "androidx.constraintlayout:constraintlayout:2.0.0-alpha4"
+            const val recyclerView = "androidx.recyclerview:recyclerview:1.1.0-alpha04"
+            const val viewModelKtx = "androidx.lifecycle:lifecycle-viewmodel-ktx:2.1.0-alpha04"
             const val pagingRx = "androidx.paging:paging-rxjava2:$pagingVersion"
             const val pagingRuntimeKtx = "androidx.paging:paging-runtime-ktx:$pagingVersion"
             const val pagingCommon = "androidx.paging:paging-common:$pagingVersion"
-            const val viewPager2 = "androidx.viewpager2:viewpager2:1.0.0-alpha02"
-            const val dynamicAnimation = "androidx.dynamicanimation:dynamicanimation-ktx:1.0.0-alpha01"
+            const val viewPager2 = "androidx.viewpager2:viewpager2:1.0.0-alpha03"
+            const val dynamicAnimation = "androidx.dynamicanimation:dynamicanimation-ktx:1.0.0-alpha02"
             const val navigationFragmentKtx = "androidx.navigation:navigation-fragment-ktx:$navigationVersion"
             const val navigationUiKtx = "androidx.navigation:navigation-ui-ktx:$navigationVersion"
             const val workRuntimeKtx = "android.arch.work:work-runtime-ktx:$workVersion"
