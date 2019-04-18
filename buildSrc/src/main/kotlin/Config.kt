@@ -24,7 +24,7 @@ object Config {
     }
 
     object Plugins {
-        const val android = "com.android.tools.build:gradle:3.3.1"
+        const val android = "com.android.tools.build:gradle:3.4.0"
         const val ktlint = "org.jlleitschuh.gradle:ktlint-gradle:7.2.1"
         const val navigation = "androidx.navigation:navigation-safe-args-gradle-plugin:$navigationVersion"
         const val ossLicenses = "com.google.android.gms:oss-licenses-plugin:0.9.3"
